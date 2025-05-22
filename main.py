@@ -1,13 +1,12 @@
-def add_student_record():
-    print("you are on student add record")
+from student_management import (
+    add_student_record, update_student_record,
+    view_student_record, delete_student
+)
 
-
-def view_student_record():
-    print("you are on student view record")
-
-
-def update_student_record():
-    print("you are on student update record")
+from attendance_management import (
+    take_attendance,
+    view_attendance,
+)
 
 
 def menu():
@@ -19,7 +18,7 @@ def menu():
         print("Etner 4 To Delete Student")
         print("Etner 5 To Take Attendance")
         print("Enter 6 to View Attendance")
-        print("Enter 8 to end")
+        print("Enter 7 to end")
         option = input()
         if option == "1":
             add_student_record()
@@ -27,7 +26,13 @@ def menu():
             view_student_record()
         elif option == "3":
             update_student_record()
-        elif option == "8":
+        elif option == "4":
+            delete_student()
+        elif option == "5":
+            take_attendance()
+        elif option == "6":
+            view_attendance()
+        elif option == "7":
             run = False
         else:
             print("Invalid choices")
