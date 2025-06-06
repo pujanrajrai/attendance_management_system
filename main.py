@@ -19,7 +19,7 @@ def menu():
         print("Etner 5 To Take Attendance")
         print("Enter 6 to View Attendance")
         print("Enter 7 to end")
-        option = input()
+        option = input("Enter Menu No: ")
         if option == "1":
             add_student_record()
         elif option == "2":
