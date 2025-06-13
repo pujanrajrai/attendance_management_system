@@ -50,4 +50,23 @@ def update_student_record():
 
 
 def delete_student():
-    print("You are on Delete Student")
+    roll_no = input("Enter Student Roll No:")
+    is_deleted = False
+    updated_record = []
+    # step 1 read student record
+    with open("student.txt", "r") as file:
+        students = file.readlines()
+        for student in students:
+            student_record = student.strip().split(",")
+            student_roll = student_record[0]
+            if student_roll == roll_no:
+                print(f"Student Records: {student_record}")
+                is_deleted = True
+            else:
+                updated_record.append(student)
+        if is_deleted:
+            with open("student.txt", "w") as file:
+                file.writelines(updated_record)
+            print("Student record Deleted successfully.")
+        else:
+            print("Student record not found.")

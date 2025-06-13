@@ -12,7 +12,7 @@ from attendance_management import (
 def menu():
     run = True
     while run:
-        print("Etner 1 To Add Student")
+        print("Enter 1 To Add Student")
         print("Enter 2 To View Student Details")
         print("Etner 3 to Update Student")
         print("Etner 4 To Delete Student")
